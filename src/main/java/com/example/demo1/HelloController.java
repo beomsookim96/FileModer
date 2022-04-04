@@ -49,5 +49,5 @@ public class HelloController {
 
         fileTransferInterface.addLineToFile(filelist.getCheckModel().getCheckedItems(),jsonpath.getText());
     }
-    
+
 }
