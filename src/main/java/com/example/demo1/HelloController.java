@@ -1,6 +1,7 @@
 package com.example.demo1;
 
 import com.example.demo1.Service.Impl.FileTransferInterfaceImpl;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -16,7 +17,13 @@ public class HelloController {
     private CheckListView<String> filelist;
 
     @FXML
-    private Label welcomeText;
+    private TextField addProperty;
+
+    @FXML
+    private TextField addValue;
+
+    @FXML
+    private TextField subtractProperty;
 
     @FXML
     private TextField jsonpath;
@@ -47,7 +54,26 @@ public class HelloController {
         }
         /////////////////////////////////////////////////////
 
-        fileTransferInterface.addLineToFile(filelist.getCheckModel().getCheckedItems(),jsonpath.getText());
+        fileTransferInterface.addLineToFile(filelist.getCheckModel().getCheckedItems(),
+                jsonpath.getText(),
+                addProperty.getText(),
+                addValue.getText());
+
+
     }
 
+    public void onSubtractButtonClick(ActionEvent event) {
+
+        /* 개발시에만 사용 *////////////////////////////////////
+        for (String s :
+                filelist.getCheckModel().getCheckedItems()) {
+            System.out.println(s);
+        }
+        /////////////////////////////////////////////////////
+
+        fileTransferInterface.subtractLineToFile(filelist.getCheckModel().getCheckedItems(),
+                jsonpath.getText(),
+                subtractProperty.getText());
+
+    }
 }

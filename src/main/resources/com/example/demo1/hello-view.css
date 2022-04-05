@@ -1,3 +1,105 @@
-#jsonpath {
+Button {
+    -fx-border-color: #00ff00;
+    -fx-background-color: black;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00ff00;
+
+}
+CheckListView{
+    -fx-border-color: #00ff00;
+    -fx-background-color: black;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00ff00;
+}
+
+CheckListView:filled{
+    -fx-border-color: #00ff00;
+    -fx-background-color: black;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00ff00;
+}
+CheckBox{
+    -fx-border-color: #00ff00;
+    -fx-background-color: black;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00ff00;
+}
+
+.thumb{
+    -fx-background-color: black;
+    -fx-border-color: #00ff00;
+}
+
+.increment-button{
+    -fx-background-color: black;
+    -fx-border-color: #00ff00;
+}
+
+.increment-arrow{
+    -fx-background-color: black;
+    -fx-border-color: #00ff00;
+}
+
+.decrement-arrow{
+    -fx-background-color: black;
+    -fx-border-color: #00ff00;
+}
+
+.decrement-button{
+    -fx-background-color: black;
+    -fx-border-color: #00ff00;
+}
+
+.track{
+    -fx-background-color: black;
+    -fx-border-color: #00ff00;
+}
+
+CheckBox .box{
+    -fx-background-color: black;
+}
+
+CheckBox:selected .mark {
+    -fx-background-color: #00ff00;
+}
+
+CheckBox:selected .box{
+    -fx-background-color: black;
+}
+CheckBoxListCell:filled{
+    -fx-border-color: #00ff00;
+    -fx-background-color: black;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00ff00;
+}
+
+CheckBoxListCell:odd{
+    -fx-border-color: #00ff00;
+    -fx-background-color: black;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00ff00;
+}
+
+CheckBoxListCell:even{
+    -fx-border-color: #00ff00;
+    -fx-background-color: #000000;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00ff00;
+}
+
+
+
+Button:hover {
+    -fx-background-color: #ffed00;
+}
+TextField {
+    -fx-border-color: #00ff00;
+    -fx-background-color: black;
+    -fx-text-fill: #00ff00;
+}
+
+VBox {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #000000, #000000);
+
 }
 

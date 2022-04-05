@@ -16,12 +16,25 @@ public class FileTransferInterfaceImpl implements FileTransferInterface {
     }
 
     @Override
-    public boolean addLineToFile(List<String> list, String path) throws FileNotFoundException {
+    public boolean addLineToFile(List<String> list, String path,String property, String value) throws FileNotFoundException {
 
         for (String s:
              list) {
-            fe.addLineToFile(path+"/"+s);
+            fe.addLineToFile(path+"/"+s,property,value);
         }
+
+        return false;
+
+    }
+
+    @Override
+    public boolean subtractLineToFile(List<String> list, String path, String property) {
+
+        for (String s :
+                list) {
+            fe.substractLineToFile(path+"/"+s,property);
+        }
+
         return false;
     }
 }

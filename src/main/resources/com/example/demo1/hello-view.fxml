@@ -11,10 +11,14 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
-    <CheckListView fx:id="filelist"></CheckListView>
-    <TextField fx:id="jsonpath"/>
-    <Button text="Search" onAction="#onHelloButtonClick"/>
-    <TextField fx:id="refactorItem"/>
-    <Button text="Add" onAction="#onAddButtonClick"/>
-    <Button text="Subtract" onAction="#onAddButtonClick"/>
+    <CheckListView fx:id="filelist"/>
+    <TextField promptText="Path" fx:id="jsonpath"/>
+    <Button text="SEARCH" onAction="#onHelloButtonClick"/>
+
+    <TextField promptText="Property" fx:id="addProperty"/>
+    <TextField promptText="Value" fx:id="addValue"/>
+    <Button text="ADD" onAction="#onAddButtonClick"/>
+    <TextField promptText="Property" fx:id="subtractProperty"/>
+    <Button text="SUBTRACT" onAction="#onSubtractButtonClick"/>
+
 </VBox>
