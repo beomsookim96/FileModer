@@ -11,4 +11,6 @@ public interface FileTransferInterface {
 
     public boolean subtractLineToFile(List<String> list,String path,String property);
 
+    public boolean csvToJSON(List<String> list,String path) throws FileNotFoundException;
+
 }

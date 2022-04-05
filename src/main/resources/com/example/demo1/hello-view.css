@@ -90,7 +90,8 @@ CheckBoxListCell:even{
 
 
 Button:hover {
-    -fx-background-color: #ffed00;
+    -fx-background-color: #00f7ff;
+    -fx-text-fill: #f700ff;
 }
 TextField {
     -fx-border-color: #00ff00;

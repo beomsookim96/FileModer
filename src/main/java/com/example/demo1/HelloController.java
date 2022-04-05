@@ -3,8 +3,8 @@ package com.example.demo1;
 import com.example.demo1.Service.Impl.FileTransferInterfaceImpl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import org.controlsfx.control.CheckListView;
 
 import java.io.FileNotFoundException;
@@ -12,6 +12,9 @@ import java.io.FileNotFoundException;
 public class HelloController {
 
     FileTransferInterfaceImpl fileTransferInterface = new FileTransferInterfaceImpl();
+
+    @FXML
+    private Text result;
 
     @FXML
     private CheckListView<String> filelist;
@@ -75,5 +78,17 @@ public class HelloController {
                 jsonpath.getText(),
                 subtractProperty.getText());
 
+    }
+
+    public void onCsvParsingButtonClick(ActionEvent event) throws FileNotFoundException {
+
+        /* 개발시에만 사용 *////////////////////////////////////
+        for (String s :
+                filelist.getCheckModel().getCheckedItems()) {
+            System.out.println(s);
+        }
+        /////////////////////////////////////////////////////
+
+        fileTransferInterface.csvToJSON(filelist.getCheckModel().getCheckedItems(),jsonpath.getText());
     }
 }

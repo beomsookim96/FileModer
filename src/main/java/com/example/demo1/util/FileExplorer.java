@@ -2,6 +2,7 @@ package com.example.demo1.util;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import com.google.gson.*;
@@ -16,10 +17,7 @@ public class FileExplorer {
 
         List<String> list = new ArrayList<>();
 
-        for (String s :
-                filenames) {
-            list.add(s);
-        }
+        list.addAll(Arrays.asList(filenames));
 
         return list;
     }
@@ -31,9 +29,6 @@ public class FileExplorer {
 
             Gson gson= new Gson();
             JsonObject obj = gson.fromJson(reader,JsonObject.class);
-            System.out.println("p : " + property);
-            System.out.println("v : " + value);
-            System.out.println(obj);
 
             obj.add(property,JsonParser.parseString(value));
             FileWriter fw = new FileWriter(path);
@@ -48,7 +43,7 @@ public class FileExplorer {
         return true;
     }
 
-    public boolean substractLineToFile(String path, String property){
+    public boolean subtractLineToFile(String path, String property){
 
         try {
             Reader reader = new FileReader(path);
@@ -56,8 +51,6 @@ public class FileExplorer {
             Gson gson= new Gson();
 
             JsonObject obj = gson.fromJson(reader,JsonObject.class);
-            System.out.println("p : " + property);
-            System.out.println(obj);
 
             obj.remove(property);
             FileWriter fw = new FileWriter(path);
